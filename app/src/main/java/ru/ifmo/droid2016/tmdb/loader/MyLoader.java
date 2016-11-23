@@ -12,7 +12,6 @@ import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Locale;
 
-import ru.ifmo.droid2016.tmdb.PopularMoviesActivity;
 import ru.ifmo.droid2016.tmdb.api.TmdbApi;
 import ru.ifmo.droid2016.tmdb.model.Movie;
 import ru.ifmo.droid2016.tmdb.utils.IOUtils;
