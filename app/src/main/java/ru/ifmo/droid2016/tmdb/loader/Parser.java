@@ -15,11 +15,13 @@ import ru.ifmo.droid2016.tmdb.model.Movie;
 import ru.ifmo.droid2016.tmdb.utils.IOUtils;
 
 /**
- * Created by ivan.trofimov on 23.11.16.
+ * Created by ivantrofimov on 23.11.16.
  */
 
 
 public class Parser {
+     static final String IMG_URL = "https://image.tmdb.org/t/p/w500";
+
     public static List<Movie> parseTmdb(InputStream in) throws IOException, JSONException {
         final String content = IOUtils.readToString(in, "UTF-8");
         final JSONObject json = new JSONObject(content);
@@ -32,7 +34,7 @@ public class Parser {
         for (int i = 0; i < movieJson.length(); i++) {
             JSONObject jsonO = movieJson.optJSONObject(i);
             if (jsonO != null) {
-                final String posterPath = jsonO.optString("poster_path");
+                final String posterPath = IMG_URL + jsonO.optString("poster_path");
                 final String originalTitle = jsonO.optString("original_title");
                 final String overviewText = jsonO.optString("overview");
                 final String localizedTitle = jsonO.optString("title");
