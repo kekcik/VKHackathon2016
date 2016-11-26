@@ -19,3 +19,14 @@ app.directive('date', function() {
         }  
     }  
 });
+
+app.directive('description', function() {
+    return {
+        restrict: 'A',
+        scope: true,
+        templateUrl: 'page/description-directive.html',
+        controller: function ($scope, $element) {
+
+        }  
+    }  
+});
