@@ -1,0 +1,14 @@
+.divMainAddSub {
+	width: 400;
+	overflow: hidden;
+}
+.divSub {
+	border-bottom-color: #c1cdcd;
+	border-width: 1;
+	border-bottom-style: solid;
+	padding-top: 0;
+}
+.divInput {
+	padding-left: 10;
+	padding-right: 10
+}

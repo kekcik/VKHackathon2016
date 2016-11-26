@@ -14,7 +14,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
         {
             group_id: 00,
             id: 01,
-            title: 'Android Cource',
+            title: 'Android Course',
             flag: 0,
             color: 'blue',
             subject_desription: 'Курс ко-ко/ Внимание! Сессия состоится 28 декабря. Не забываем сдавать Ваши проекты вовремя. Да и вообще, пройдите, пожалуйста тест на git.'
