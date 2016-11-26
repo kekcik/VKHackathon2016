@@ -6,14 +6,18 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.dates = []
     $scope.currentSubject = 00;
     $scope.currentDate = 00;
-    $scope.subjectTag = '';
     $scope.subjectTitle = '';
     $scope.subjectDescription = '';
     $scope.lessonDescription = '';
     $scope.lessonTagTag = '';
     $scope.lastModified = '';
+    $scope.periodicity = [ 
+        {id: 1, period: 'Once'},
+        {id: 2, period: 'Once at week'},
+        {id: 3, period: 'Once at two weeks'},
+    ];
+
     $scope.clickSubject = function (subject) {
-        $scope.subjectTag = '#' + subject.title.replace(' ', '');
         $scope.currentSubject = subject.id;
         $scope.subjectTitle = subject.title;
         $scope.subjectDescription = subject.subject_description;
@@ -87,4 +91,5 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
         }
       }
     }
+
 });
