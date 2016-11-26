@@ -6,13 +6,14 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.dates = []
     $scope.currentSubject = 00;
     $scope.currentDate = 00;
+    $scope.subjectTag = '';
     $scope.subjectTitle = '';
     $scope.subjectDescription = '';
     $scope.lessonDescription = '';
     $scope.lessonTagTag = '';
     $scope.lastModified = '';
-
     $scope.clickSubject = function (subject) {
+        $scope.subjectTag = '#' + subject.title.replace(' ', '');
         $scope.currentSubject = subject.id;
         $scope.subjectTitle = subject.title;
         $scope.subjectDescription = subject.subject_description;
