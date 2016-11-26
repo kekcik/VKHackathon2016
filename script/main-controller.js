@@ -61,19 +61,26 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     var alert;
     $scope.showDialog = showDialog;
     $scope.items = [1, 2, 3];
-    function showDialog($event) {
+
+    $scope.openAddSubject = function ($event) {
+        var tUrl = 'page/add-subject-directive.html';
+        showDialog($event, tUrl);
+    }
+
+    $scope.openAddLesson = function ($event) {
+        var tUrl = 'page/add-date-directive.html';
+        showDialog($event, tUrl);
+    }
+
+    function showDialog($event, tUrl) {
        var parentEl = angular.element(document.body);
        $mdDialog.show({
          parent: parentEl,
          targetEvent: $event,
-         templateUrl: 'page/add-subject-directive.html',
-         locals: {
-           items: $scope.items
-         },
+         templateUrl: tUrl,
          controller: DialogController
       });
-      function DialogController($scope, $mdDialog, items) {
-        $scope.items = items;
+      function DialogController($scope, $mdDialog) {
         $scope.closeDialog = function() {
           $mdDialog.hide();
         }
