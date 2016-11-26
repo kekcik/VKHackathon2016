@@ -1,47 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/Users//LifePro/Desktop/Hackathon/Style/AddSub.css">
-	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-</head>
-<body ng-app="AddSub">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-  <script type="text/javascript">
-  	angular.module('AddSub', ['ngMaterial']);
-  </script>
-  <div style="width: 400;">
-	<div style="border-bottom-color: #c1cdcd;
-	border-width: 1;
-	border-bottom-style: solid;
-	padding-left: 10;
-	padding-right: 10;" align="center">
+<div style="width: 400;">
+	<div style="
+		border-bottom-color: #c1cdcd;
+		border-width: 1;
+		border-bottom-style: solid;
+		padding-left: 10;
+		padding-right: 10;" align="center">
 		<h3 align="center" style="padding-top: 0; padding-bottom: 0">Add subject</h3>
 	</div>
 	<div layout="column" style="padding-right: : 10; padding-left: 10">
-	<md-input-container >
-		<label>Name of the subject</label>
-		<input type="text" ng-model="tTitle">
-	</md-input-container>
-	<md-input-container style="padding-top: 0">
-		<label>Description of the subject</label>
-		<input type="text" ng-model="tContent">
-	</md-input-container>
-	<section align="center">
-	<md-button class="md-fab btn1" ng-disabled="!tTitle || !tContent" style="color: black"></md-button>
-	<md-button class="md-fab btn2" ng-disabled="!tTitle || !tContent"></md-button>
-	<md-button class="md-fab btn3" ng-disabled="!tTitle || !tContent"></md-button>
-	<md-button class="md-fab btn4" ng-disabled="!tTitle || !tContent"></md-button>
-	<md-button class="md-fab btn5" ng-disabled="!tTitle || !tContent"></md-button>
-	</section>
-	<md-button class="md-raised md-primary">Cancel</md-button>
+		<md-input-container >
+			<label>Name of the subject</label>
+			<input type="text" ng-model="tTitle">
+		</md-input-container>
+		<md-input-container style="padding-top: 0">
+			<label>Description of the subject</label>
+			<input type="text" ng-model="tContent">
+		</md-input-container>
+		<section align="center">
+		<md-button class="md-fab btn1" ng-disabled="!tTitle || !tContent" style="color: black"></md-button>
+		<md-button class="md-fab btn2" ng-disabled="!tTitle || !tContent"></md-button>
+		<md-button class="md-fab btn3" ng-disabled="!tTitle || !tContent"></md-button>
+		<md-button class="md-fab btn4" ng-disabled="!tTitle || !tContent"></md-button>
+		<md-button class="md-fab btn5" ng-disabled="!tTitle || !tContent"></md-button>
+		</section>
+		<md-button class="md-raised md-primary" ng-click="closeDialog()">Cancel</md-button>
 	</div>
-	</div>
-</html>
-
-
+</div>
