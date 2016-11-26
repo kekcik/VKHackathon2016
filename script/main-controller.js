@@ -1,4 +1,4 @@
-app.controller('MainPageController', function MainPageController ($scope, $mdDialog) {
+app.controller('MainPageController', function MainPageController ($scope, $mdDialog, $http) {
     $scope.ddd = "456"
     $scope.subjects = [
         {
@@ -83,17 +83,44 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
         $scope.lastModified = '';
     }
 
+    $scope.clickVK = function () {
+        VK.init(function() {
+            console.log("vk init: success")
+            // API initialization succeeded 
+            // Your code here 
+        }, function() { 
+            console.log("vk init: error")
+            // API initialization failed 
+            // Can reload page here 
+        }, '5.60');
+    }
+
+    $scope.clickPost = function () {
+        VK.api("wall.post", {"message": "Hello!"}, function (data) {
+            console.log("Post ID:" + data.response.post_id);
+        }, function (data) {
+            console.log("Post: error" + data);
+        });
+    }
+
+    var getSubjects = function () {
+        connectionUrl = ''
+        $http.get(connectionUrl).success(function (data) {
+            
+        }).error(function () {
+
+        })
+    }
+
     var alert;
     $scope.showDialog = showDialog;
     $scope.items = [1, 2, 3];
-
-
     function showDialog($event) {
        var parentEl = angular.element(document.body);
        $mdDialog.show({
          parent: parentEl,
          targetEvent: $event,
-         templateUrl: 'page/demo-dialog.html',
+         templateUrl: 'page/add-subject-directive.html',
          locals: {
            items: $scope.items
          },
