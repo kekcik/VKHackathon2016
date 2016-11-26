@@ -6,21 +6,24 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.dates = []
     $scope.currentSubject = 00;
     $scope.currentDate = 00;
+    $scope.subjectTag = '';
     $scope.subjectTitle = '';
     $scope.subjectDescription = '';
     $scope.lessonDescription = '';
     $scope.lessonTagTag = '';
     $scope.lastModified = '';
-    $scope.periodicity = [ 
-        {id: 1, period: 'Once'},
-        {id: 2, period: 'Once at week'},
-        {id: 3, period: 'Once at two weeks'},
-    ];
 
     $scope.clickSubject = function (subject) {
+        $scope.subjectTag = '#' + subject.title.replace(' ','') + "@M3238";
         $scope.currentSubject = subject.id;
         $scope.subjectTitle = subject.title;
         $scope.subjectDescription = subject.subject_description;
+        $scope.lessonDescription = '';
+        $scope.lessonTagTag = '';
+        $scope.lastModified = '';
+    }
+
+    $scope.clickDate = function (date) {
         $scope.lessonDescription = '';
         $scope.lessonTagTag = '';
         $scope.lastModified = '';
@@ -76,7 +79,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
         var tUrl = 'page/add-date-directive.html';
         showDialog($event, tUrl);
     }
-    
+
     function showDialog($event, tUrl) {
         var parentEl = angular.element(document.body);
         $mdDialog.show({
