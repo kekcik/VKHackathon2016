@@ -84,18 +84,12 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     }
 
     $scope.clickVK = function () {
-        VK.init(function() {
-            console.log("vk init: success")
-            // API initialization succeeded 
-            // Your code here 
-        }, function() { 
-            console.log("vk init: error")
-            // API initialization failed 
-            // Can reload page here 
-        }, '5.60');
+        getSubjects()
     }
 
     $scope.clickPost = function () {
+
+
         VK.api("wall.post", {"message": "Hello!"}, function (data) {
             console.log("Post ID:" + data.response.post_id);
         }, function (data) {
@@ -104,11 +98,12 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     }
 
     var getSubjects = function () {
-        connectionUrl = ''
+        connectionUrl = 'http://77.244.216.254:8000/api/get/subject/?format=json'
         $http.get(connectionUrl).success(function (data) {
-
+            $scope.subjects = data.objects;
+            console.log(data);
         }).error(function (data) {
-
+            console.log(data);
         })
     }
 
