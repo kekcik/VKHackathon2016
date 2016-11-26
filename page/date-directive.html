@@ -1,15 +1,10 @@
-
 <div layout=row>
-<div style="
-  outline: 0px solid #000; margin: 8px; padding: 4px; overflow-y:scroll;
-">
-<div style="
-    background:#DFE6ED; min-width: 120px; height: 30px; margin: 8px;
-    padding-top: 3px; text-align:center; display: table-cell;
-"
-ng-show="subjects.length == 0">Add lesson</div>
-  <div style="
-    display: inline-block; padding-right: 8px; display: table-cell; padding-bottom:16px;" 
+<div style="width:700px; outline: 0px solid #000; margin: 8px; padding: 4px; overflow-y:scroll;">
+<div style="background:#DFE6ED; min-width: 120px; height: 30px; margin: 8px; padding-top: 3px; text-align:center; display: table-cell;"
+  ng-show="subjects.length == 0">
+    Add lesson
+  </div>
+  <div style=" display: inline-block; padding-right: 8px; display: table-cell; padding-bottom:16px;" 
     ng-repeat="date in dates">
     <div style="
       background: #ffffff; width: 120px; height: 120px; text-align:center;">
