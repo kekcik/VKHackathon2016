@@ -1,22 +1,37 @@
-<div style="
-  outline: 2px solid #000;
-  height: 30px;
-  margin: 8px;
-  padding: 4px;
-">
+
+<div layout="row">
   <div style="
-    display: inline-block;
-    padding-right: 8px;
-    font-size: 18px;" 
-    ng-repeat="subject in ['iOs Vk', 'Android', 'Mathematics']">
+    width:700px;
+    outline: 0px solid #000;
+    height: 30px;
+    margin: 8px;
+    padding: 4px;
+    overflow-y:scroll;
+  ">
     <div style="
-      background:#ffffff;
-      padding-top: 3px;
-      width: 120px;
-      height: 27px;
-      text-align:center;
-    ">
-      {{subject}}
+      display: table-cell;
+      padding-right: 8px;
+      font-size: 18px;"
+      ng-repeat="subject in subjects">
+      <div style="
+        overflow:visiable;
+        white-space:nowrap;
+        padding-left:4px;
+        padding-right:4px;
+        background:#DFE6ED;
+        padding-top: 3px;
+        min-width: 120px;
+        height: 27px;
+        text-align:center;"
+      ng-click="clickSubject(subject)">
+        {{subject.title}}
+      </div>
     </div>
   </div>
+  <div>
+    <md-button ng-click="showDialog($event)" class="md-raised md-warn">
+      +
+    </md-button>
+  </div>
 </div>
+
