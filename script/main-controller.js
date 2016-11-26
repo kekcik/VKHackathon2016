@@ -76,20 +76,20 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
         var tUrl = 'page/add-date-directive.html';
         showDialog($event, tUrl);
     }
-
+    
     function showDialog($event, tUrl) {
-       var parentEl = angular.element(document.body);
-       $mdDialog.show({
-         parent: parentEl,
-         targetEvent: $event,
-         templateUrl: tUrl,
-         controller: DialogController
-      });
-      function DialogController($scope, $mdDialog) {
-        $scope.closeDialog = function() {
-          $mdDialog.hide();
+        var parentEl = angular.element(document.body);
+        $mdDialog.show({
+            parent: parentEl,
+            targetEvent: $event,
+            templateUrl: tUrl,
+            controller: DialogController
+        });
+        function DialogController($scope, $mdDialog) {
+            $scope.closeDialog = function() {
+                $mdDialog.hide();
+            }
         }
-      }
     }
 
 });
