@@ -1,4 +1,15 @@
+
 <div layout="row">
+  <div style="
+    background:#DFE6ED;
+    min-width: 120px;
+    height: 30px;
+    margin: 8px;
+    padding-top: 3px;
+    text-align:center;
+    display: table-cell;
+"
+ng-show="subjects.length == 0">Add subject</div>
   <div style="
     width:700px;
     outline: 0px solid #000;
@@ -20,7 +31,7 @@
         padding-right:4px;
         background:#DFE6ED;
         padding-top: 3px;
-        min-widsth: 120px;
+        min-width: 120px;
         height: 27px;
         text-align:center;"
       ng-click="clickSubject(subject)">
