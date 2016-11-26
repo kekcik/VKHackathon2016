@@ -1,12 +1,50 @@
 <div style="
-  display: inline-block;
-  padding-right: 8px;
-" ng-repeat="subject in ['iOs Vk', 'Android', 'Mathematics', ddd, abc]">
+  outline: 2px solid #000;
+  height: 120px;
+  margin: 8px;
+  padding: 4px;
+">
   <div style="
-    background:#ffffff;
-    width: 120px;
-    height: 20px;
-  ">
-    {{subject}}
+    display: inline-block;
+    padding-right: 8px;" 
+    ng-repeat="date in [1480148795000, 1460148795000, 1440148795000, 1420148795000]">
+    <div style="
+      background: #ffffff;
+      width: 120px;
+      height: 120px;
+      text-align:center;">
+      <div flex layout="column">
+        <div style="
+          margin-top:2px;
+          margin-bottom:-2px;
+          height:25px;
+          align-content:center
+        ">
+          {{date | date:'MMMM yy'}}
+        </div>
+        <div style="
+          height:70px;
+          background: #dddddd;
+          font-size:55px;
+        ">
+          {{date | date:'dd'}}
+        </div>
+        <div layout="row" style="
+          height:25px;
+          margin-top:2px;
+          margin-bottom:-2px;"> 
+          <div style="width:40px;">
+            !
+          </div> 
+          <div style="width:40px;">
+            ?
+          </div>
+          <div style="width:40px;">
+            -
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+

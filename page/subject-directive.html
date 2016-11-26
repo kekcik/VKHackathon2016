@@ -1,12 +1,22 @@
 <div style="
-  display: inline-block;
-  padding-right: 8px;
-" ng-repeat="subject in ['iOs Vk', 'Android', 'Mathematics', ddd, abc]">
+  outline: 2px solid #000;
+  height: 30px;
+  margin: 8px;
+  padding: 4px;
+">
   <div style="
-    background:#ffffff;
-    width: 120px;
-    height: 20px;
-  ">
-    {{subject}}
+    display: inline-block;
+    padding-right: 8px;
+    font-size: 18px;" 
+    ng-repeat="subject in ['iOs Vk', 'Android', 'Mathematics']">
+    <div style="
+      background:#ffffff;
+      padding-top: 3px;
+      width: 120px;
+      height: 27px;
+      text-align:center;
+    ">
+      {{subject}}
+    </div>
   </div>
 </div>
