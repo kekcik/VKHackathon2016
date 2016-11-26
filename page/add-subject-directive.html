@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="AddSubject/AddSub.css">
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 </head>
 <body ng-app="AddSub">
@@ -17,9 +18,10 @@
 	<div style="border-bottom-color: #c1cdcd;
 	border-width: 1;
 	border-bottom-style: solid;
-	padding: 0">
+	padding: 0" align="center">
 		<h3 align="center">Add subject</h3>
 	</div>
+	<div layout="column">
 	<md-input-container>
 		<label>Name of the subject</label>
 		<input type="text" ng-model="tTitle">
@@ -28,4 +30,13 @@
 		<label>Description of the subject</label>
 		<input type="text" ng-model="tContent">
 	</md-input-container>
+	<section align="center">
+	<md-button class="md-fab" ></md-button>
+	<md-button class="md-fab md-mini1"></md-button>
+	<md-button class="md-fab md-mini2"></md-button>
+	<md-button class="md-fab md-mini3"></md-button>
+	<md-button class="md-fab md-mini3"></md-button>
+	</section>
+	<md-button class="md-primary md-raised" ng-disabled="!tTitle || !tContent">Add subject</md-button>
+	</div>
 </html>
