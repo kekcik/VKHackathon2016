@@ -11,16 +11,19 @@
         Cancel
       </md-switch>
     </div>
-    <div ng-show="subjectTitle.equals('')" style="margin:10px; padding:10px; box-shadow: 0px 3px 0px 0px #DFE6ED; font-size:24px; font-weight:400;"> 
-      {{subjectTitle}} {{subjectTag}}
+    <div ng-show="subjectTitle != ''" style="padding:10px; font-size:30px; font-weight:500; text-align:center; margin-bottom:-25px;"> 
+      {{subjectTitle}}
     </div>
-    <div ng-show="subjectTitle.equals('')" style="margin:10px; padding:10px; box-shadow: 0px 3px 0px 0px #DFE6ED; font-size:18px; font-weight:300;">
+    <div ng-show="subjectTitle != ''" style="margin:10px; padding:10px; box-shadow: 0px 2px 0px 0px #DFE6ED; font-size:24px; font-weight:300; text-align:center; "> 
+      {{subjectTag}}
+    </div>
+    <div ng-show="subjectTitle != ''" style="margin:10px; padding:10px; box-shadow: 0px 2px px 0px #DFE6ED; font-size:18px; font-weight:300; ">
       {{subjectDescription}}
     </div>
-    <div ng-show="lessonDescription.equals('')" style="margin:10px; padding:10px; box-shadow: 0px 3px 0px 0px #DFE6ED; font-size:18px; font-weight:300;">
+    <div ng-show="lessonDescription != ''" style="margin:10px; padding:10px; box-shadow: 0px 2px 0px 0px #DFE6ED; font-size:18px; font-weight:300;">
       {{lessonDescription}}
     </div>
-    <div ng-show="lessonDescription.equals('')" style="margin:10px; padding:10px; font-size:18px; font-weight:300;">
+    <div ng-show="lessonDescription != ''" style="margin:10px; padding:10px; font-size:18px; font-weight:300;">
       {{lessonTagTag}}
       {{lastModified}}
     </div>

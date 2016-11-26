@@ -2,7 +2,72 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.ddd = "456"
     $scope.subjectFlag = false;
     $scope.datesFlag = false;
-    $scope.subjects = [];
+    $scope.subjects = [
+        {
+            group_id: 00,
+            id: 00,
+            title: 'iOS VK',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 01,
+            title: 'Android Cource',
+            flag: 0,
+            color: 'blue',
+            subject_desription: 'Курс ко-ко/ Внимание! Сессия состоится 28 декабря. Не забываем сдавать Ваши проекты вовремя. Да и вообще, пройдите, пожалуйста тест на git.'
+        },
+        {
+            group_id: 00,
+            id: 02,
+            title: 'Mathematics',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 03,
+            title: 'Ochen\' dlinnoe nazvanie',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 04,
+            title: 'Ochen\' dlinnoe nazvanie1',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 05,
+            title: 'Ochen\' dlinnoe nazvanie2',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 06,
+            title: 'Ochen\' dlinnoe nazvanie 3',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        },
+        {
+            group_id: 00,
+            id: 07,
+            title: 'Ochen\' dlinnoe nazvanie 4',
+            flag: 0,
+            color: 'blue',
+            subject_desription: '--'
+        }
+    ];    
     $scope.dates = []
     $scope.currentSubject = 00;
     $scope.currentDate = 00;
@@ -14,7 +79,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.lastModified = '';
 
     $scope.clickSubject = function (subject) {
-        $scope.subjectTag = '#' + subject.title.replace(' ','') + "@M3238";
+        $scope.subjectTag = '#' + subject.title.replace(' ','').replace(' ','').replace(' ','') + "@M3238";
         $scope.currentSubject = subject.id;
         $scope.subjectTitle = subject.title;
         $scope.subjectDescription = subject.subject_description;
@@ -71,6 +136,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     $scope.items = [1, 2, 3];
 
     $scope.openAddSubject = function ($event) {
+        console.log(123)
         var tUrl = 'page/add-subject-directive.html';
         showDialog($event, tUrl);
     }

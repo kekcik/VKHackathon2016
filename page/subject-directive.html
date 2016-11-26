@@ -1,24 +1,24 @@
-
-<div layout="row">
-  <div style="border-radius: 5px; background:#81D4FA; min-width: 700px; height: 30px; margin: 8px;
-    padding-top: 3px; text-align:center; display: table-cell;" 
-    ng-show="subjects.length == 0">
-  Add subject for start :)
-</div>
-  <div style="width:700px; outline: 0px solid #000; height: 30px; margin: 8px;
-    padding: 4px; overflow-y:scroll; padding-bottom:16px;">
-    <div style="display: table-cell; padding-right: 8px; font-size: 18px;" >
-      <div ng-repeat="subject in subjects" style="border-radius: 10px; overflow:visiable; white-space:nowrap; padding-left:4px; padding-right:4px;
-        background:#81D4FA; padding-top: 3px; min-width: 120px; height: 27px; text-align:center;"
-        ng-click="clickSubject(subject)">
-        {{subject.title}}
-      </div>
+<div layout="row" style="padding:12px; background:#ffffff; height:66px;">
+  <div>
+    <div 
+      ng-show = "subjects.length == 0"
+      style = "border-radius: 15px; background:#81D4FA; min-width: 700px; height: 40px; margin: 8px;
+      padding-top: 3px; text-align:center; display: table-cell;">
+      Add subject for start :)
+    </div>
+    <div style="width:700px; height: 50px;  overflow-x:scroll">
+        <div  
+          style="height: 40px; white-space: nowrap; display: table-cell; font-size: 16px; border-radius: 15px; padding:10px; background:#81D4FA; min-width: 100px; text-align:center;"
+          ng-repeat="subject in subjects"
+          ng-click="clickSubject(subject)">
+          <div>{{subject.title}}</div>
+        </div>
     </div>
   </div>
-  <div>
-    <md-button style="margin-left:10px;" ng-click="openAddSubject($event)" class="md-fab md-mini" aria-label="Eat cake">
-       +
-    </md-button>
-  </div>
+  <md-button style="margin-left:5px; margin-top:0px;" ng-click="openAddSubject($event)" class="md-fab md-mini">
+    +
+  </md-button>
 </div>
+
+
 
