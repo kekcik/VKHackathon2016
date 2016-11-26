@@ -106,10 +106,28 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     var getSubjects = function () {
         connectionUrl = ''
         $http.get(connectionUrl).success(function (data) {
-            
-        }).error(function () {
+
+        }).error(function (data) {
 
         })
+    }
+
+    var getDates = function () {
+        connectionUrl = ''; 
+        $http.get(connectionUrl).success(function (data) {
+
+        }).error(function (data) {
+
+        });
+    }
+
+    var getDatesForSubject = function (id) {
+        connectionUrl = ''; 
+        $http.get(connectionUrl).success(function (data) {
+
+        }).error(function (data) {
+
+        });
     }
 
     var alert;

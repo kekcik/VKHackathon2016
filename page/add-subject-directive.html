@@ -1,14 +1,45 @@
-<div style="border-bottom-color: #c1cdcd;
-border-width: 1;
-border-bottom-style: solid;
-padding: 0">
-	<h3 align="center">Add subject</h3>
-</div>
-<md-input-container>
-	<label>Name of the subject</label>
-	<input type="text" ng-model="tTitle">
-</md-input-container>
-<md-input-container>
-	<label>Description of the subject</label>
-	<input type="text" ng-model="tContent">
-</md-input-container>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="AddSubject/AddSub.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body ng-app="AddSub">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script type="text/javascript">
+  	angular.module('AddSub', ['ngMaterial']);
+  </script>
+	<div style="border-bottom-color: #c1cdcd;
+	border-width: 1;
+	border-bottom-style: solid;
+	padding: 0" align="center">
+		<h3 align="center">Add subject</h3>
+	</div>
+	<div layout="column">
+	<md-input-container>
+		<label>Name of the subject</label>
+		<input type="text" ng-model="tTitle">
+	</md-input-container>
+	<md-input-container>
+		<label>Description of the subject</label>
+		<input type="text" ng-model="tContent">
+	</md-input-container>
+	<section align="center">
+	<md-button class="md-fab" ></md-button>
+	<md-button class="md-fab md-mini1"></md-button>
+	<md-button class="md-fab md-mini2"></md-button>
+	<md-button class="md-fab md-mini3"></md-button>
+	<md-button class="md-fab md-mini3"></md-button>
+	</section>
+	<md-button class="md-primary md-raised" ng-disabled="!tTitle || !tContent">Add subject</md-button>
+	</div>
+</html>
+
+
