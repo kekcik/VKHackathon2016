@@ -66,6 +66,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
             subject_desription: '--'
         }
     ];
+    $scope.dates = []
     $scope.currentSubject = 00;
     $scope.currentDate = 00;
     $scope.subjectTitle = '';
@@ -85,6 +86,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
 
     $scope.clickVK = function () {
         getSubjects()
+        getDates()
     }
 
     $scope.clickPost = function () {
@@ -98,7 +100,7 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     }
 
     var getSubjects = function () {
-        connectionUrl = 'http://77.244.216.254:8000/api/get/subject/?format=json'
+        connectionUrl = 'http://77.244.216.254:8000/api/get/subject/?format=json&group_id=1'
         $http.get(connectionUrl).success(function (data) {
             $scope.subjects = data.objects;
             console.log(data);
@@ -108,11 +110,12 @@ app.controller('MainPageController', function MainPageController ($scope, $mdDia
     }
 
     var getDates = function () {
-        connectionUrl = ''; 
+        connectionUrl = 'http://77.244.216.254:8000/api/get/date/?format=json&subject=1'; 
         $http.get(connectionUrl).success(function (data) {
-
+            $scope.dates = data.objects;
+            console.log(data);
         }).error(function (data) {
-
+            console.log(data);
         });
     }
 

@@ -11,7 +11,7 @@
         padding-bottom:16px;
 
 " 
-    ng-repeat="date in [1480148795000, 1460148795000, 1440148795000, 1420148795004, 1460148795001, 1440148795002, 1420148795003]">
+    ng-repeat="date in dates">
     <div style="
       background: #ffffff;
       width: 120px;
@@ -25,14 +25,14 @@
           height:25px;
           align-content:center
         ">
-          {{date | date:'MMMM yy'}}
+          {{date.date | date:'MMMM yy'}}
         </div>
         <div style="
           height:70px;
           background: #dddddd;
           font-size:55px;
         ">
-          {{date | date:'dd'}}
+          {{date.date | date:'dd'}}
         </div>
         <div layout="row" style="
           height:25px;
