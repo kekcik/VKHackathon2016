@@ -1,0 +1,30 @@
+<html lang="en" >
+<head>
+    <meta charset="utf-8"/>
+   <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body ng-app="MobileApp" ng-controller="MainMobilePageController" ng-cloak >
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="script/mobile-config.js"></script>
+    <script src="script/mobile-controller.js"></script>
+    <script src="script/mobile-directive.js"></script>
+    <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+    <div ng-show="level != 0" ng-click='decLevel()'
+    style="color:#ffffff; background:#0C72E8; height:50px; text-align:center; font-size:24px; padding-top:15px; position: fixed; right: 0; left: 0; top: 0;">
+      GO UP
+    </div>
+    <div ng-show="level == 0" subject></div>
+    <div ng-show="level == 1" date></div>
+    <div ng-show="level == 2" description></div>
+    <div ng-show="level != 2"
+        style="color:#ffffff; background:#0C72E8; height:50px; text-align:center; font-size:24px; padding-top:15px; position: fixed; right: 0; left: 0; bottom: 0;">
+        <span ng-show="level == 0">Choose subject</span>
+        <span ng-show="level == 1">Choose date</span>
+    </div>
+</body>
+</html>
