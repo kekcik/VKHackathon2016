@@ -1,8 +1,8 @@
 <div>
-    <div ng-repeat="subject in ['iOS dev course', 'Android', 'English', 'C++', 'bolshoi subject']"
+    <div ng-repeat="subject in subjects"
     style="display: inline-block; min-width:50px; background:#00BAFF; margin:10px; padding:10px;
     font-size:18px; height:26px; color:#ffffff;"
     ng-click='clickSubject(subject)'>
-        {{subject}}
+        {{subject.title}}
     </div>
 </div>
